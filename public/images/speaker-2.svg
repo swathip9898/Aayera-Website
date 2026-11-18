@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
     <defs>
       <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#6366f1"/>
-        <stop offset="100%" stop-color="#a855f7"/>
+        <stop offset="0%" stop-color="#2478CC"/>
+        <stop offset="100%" stop-color="#25364A"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="400" fill="#0f172a"/>
-    <rect width="400" height="400" fill="url(#bg)" fill-opacity="0.32"/>
-    <circle cx="200" cy="152" r="66" fill="url(#bg)" fill-opacity="0.85"/>
-    <path d="M84 364 C84 282 134 242 200 242 C266 242 316 282 316 364" fill="url(#bg)" fill-opacity="0.72"/>
-    <circle cx="200" cy="200" r="172" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+    <rect width="400" height="400" fill="#EAF5FF"/>
+    <rect width="400" height="400" fill="url(#bg)" fill-opacity="0.22"/>
+    <circle cx="200" cy="152" r="66" fill="url(#bg)"/>
+    <path d="M84 364 C84 282 134 242 200 242 C266 242 316 282 316 364" fill="url(#bg)" fill-opacity="0.88"/>
+    <circle cx="200" cy="200" r="172" stroke="#318CE7" stroke-opacity="0.25" stroke-width="2"/>
     <text x="200" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="46" font-weight="700" fill="white" letter-spacing="2">VR</text>
   </svg>

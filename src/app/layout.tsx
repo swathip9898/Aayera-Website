@@ -23,17 +23,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let defaultTheme: "dark" | "light" = "dark";
+  let defaultTheme: "dark" | "light" = "light";
   try {
     const config = await getSiteConfig();
-    defaultTheme = config.defaultTheme || "dark";
+    defaultTheme = config.defaultTheme || "light";
   } catch {
-    defaultTheme = "dark";
+    defaultTheme = "light";
   }
 
   return (
     <html lang="en" data-theme={defaultTheme} suppressHydrationWarning>
-      <body className="antialiased selection:bg-cyan-400/30 selection:text-cyan-200">
+      <body className="antialiased selection:bg-[#70B7FF]/35 selection:text-[#25364A]">
         <ThemeProvider defaultTheme={defaultTheme}>{children}</ThemeProvider>
       </body>
     </html>

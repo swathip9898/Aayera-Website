@@ -38,7 +38,7 @@ export function SponsorsSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400">
+            <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#318CE7]">
               <Award className="h-3.5 w-3.5" />
               Ecosystem Partners
             </span>
@@ -63,10 +63,10 @@ export function SponsorsSection({
           {grouped.map(([tier, items]) => (
             <div key={tier}>
               <div className="mb-4 flex items-center gap-3">
-                <h3 className="font-display text-sm font-bold uppercase tracking-widest text-cyan-400">
+                <h3 className="font-display text-sm font-bold uppercase tracking-widest !text-[#318CE7]">
                   {tier}
                 </h3>
-                <div className="h-px flex-1 bg-gradient-to-r from-cyan-400/35 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-[#318CE7]/40 to-transparent" />
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -83,7 +83,7 @@ export function SponsorsSection({
                     whileHover={{ y: -5 }}
                     className="glass-panel group flex flex-col justify-between rounded-3xl p-5 transition"
                   >
-                    <div className="flex h-20 items-center justify-center rounded-2xl bg-slate-950/35 p-3 border border-white/10">
+                    <div className="flex h-20 items-center justify-center rounded-2xl bg-[#EAF5FF] p-3 border border-[#E3EDF7]">
                       <img
                         src={sp.logoUrl || "/images/sponsor-1.svg"}
                         alt={sp.name}

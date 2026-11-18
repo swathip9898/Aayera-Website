@@ -43,12 +43,12 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 const ACCENT_RING: Record<string, string> = {
-  cyan: "from-cyan-400 to-blue-500 text-cyan-400",
-  violet: "from-violet-400 to-indigo-500 text-violet-400",
-  emerald: "from-emerald-400 to-teal-500 text-emerald-400",
-  amber: "from-amber-400 to-orange-500 text-amber-400",
-  rose: "from-rose-400 to-pink-500 text-rose-400",
-  blue: "from-sky-400 to-indigo-500 text-sky-400",
+  cyan: "from-[#318CE7] to-[#70B7FF] text-[#318CE7]",
+  violet: "from-[#2478CC] to-[#70B7FF] text-[#2478CC]",
+  emerald: "from-[#318CE7] to-[#2478CC] text-[#318CE7]",
+  amber: "from-[#70B7FF] to-[#318CE7] text-[#318CE7]",
+  rose: "from-[#2478CC] to-[#318CE7] text-[#2478CC]",
+  blue: "from-[#318CE7] to-[#70B7FF] text-[#318CE7]",
 };
 
 const NAV_LINKS = [
@@ -106,7 +106,7 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
               <a
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-cyan-400"
+                className="transition hover:text-[#318CE7]"
                 style={{ color: "var(--text-secondary)" }}
               >
                 {item.label}
@@ -119,15 +119,15 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
             <Link
               href="/admin"
               title="Open Admin CMS Panel"
-              className="glass-subtle hidden sm:inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold transition hover:scale-105"
+              className="btn-secondary hidden sm:inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-bold"
             >
-              <Settings className="h-3.5 w-3.5 text-cyan-400" />
+              <Settings className="h-3.5 w-3.5" />
               Admin
             </Link>
             <button
               type="button"
               onClick={() => openRegister("Delegate")}
-              className="btn-aurora hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold cursor-pointer"
+              className="btn-primary hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-bold cursor-pointer"
             >
               Register
               <ArrowRight className="h-3.5 w-3.5" />
@@ -243,7 +243,7 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
               transition={{ duration: 0.55 }}
               className="lg:col-span-6 space-y-5"
             >
-              <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400">
+              <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#318CE7]">
                 <Sparkles className="h-3.5 w-3.5" />
                 About The Summit
               </span>
@@ -260,7 +260,7 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
                     key={idx}
                     className="glass-subtle flex items-start gap-3 rounded-2xl p-3.5"
                   >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#318CE7]" />
                     <span className="text-sm font-medium">{point}</span>
                   </div>
                 ))}
@@ -270,14 +270,14 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
                 <button
                   type="button"
                   onClick={() => openRegister("Delegate")}
-                  className="btn-aurora rounded-full px-6 py-3 text-sm font-bold cursor-pointer"
+                  className="btn-primary rounded-full px-6 py-3 text-sm font-bold cursor-pointer"
                 >
                   Reserve Delegate Pass
                 </button>
                 <button
                   type="button"
                   onClick={() => openRegister("Exhibitor")}
-                  className="glass-panel rounded-full px-6 py-3 text-sm font-semibold transition hover:scale-105 cursor-pointer"
+                  className="btn-secondary rounded-full px-6 py-3 text-sm font-bold cursor-pointer"
                 >
                   Book Exhibition Booth
                 </button>
@@ -314,11 +314,11 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
         </div>
       </section>
 
-      {/* Conference Themes / Pillars */}
-      <section id="themes" className="relative py-20 sm:py-24">
+      {/* Conference Themes / Pillars (Highlight Section #EAF5FF) */}
+      <section id="themes" className="section-highlight relative py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400">
+            <span className="inline-flex items-center gap-2 rounded-full glass-panel px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#318CE7]">
               <Layers className="h-3.5 w-3.5" />
               Strategic Pillars
             </span>
@@ -350,7 +350,7 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
                   <div className="glass-subtle inline-flex h-12 w-12 items-center justify-center rounded-2xl">
                     <IconComp className={`h-6 w-6 ${accentClass.split(" ").pop()}`} />
                   </div>
-                  <div className="mt-4 text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  <div className="mt-4 text-xs font-bold uppercase tracking-wider text-[#318CE7]">
                     {theme.subtitle}
                   </div>
                   <h3 className="mt-1 font-display text-xl font-bold">{theme.title}</h3>
@@ -383,20 +383,20 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
         onBecomeSponsor={() => openRegister("Sponsor")}
       />
 
-      {/* Venue & Translucent Gallery Lightbox */}
-      <section id="venue" className="relative py-20 sm:py-24">
+      {/* Venue & Translucent Gallery Lightbox (Highlight Section #EAF5FF) */}
+      <section id="venue" className="section-highlight relative py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <div className="glass-panel-strong overflow-hidden rounded-[2rem] p-6 sm:p-10">
             <div className="grid items-center gap-8 lg:grid-cols-12">
               <div className="lg:col-span-6 space-y-4">
-                <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-emerald-400">
+                <span className="inline-flex items-center gap-2 rounded-full glass-subtle px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#318CE7]">
                   <Building2 className="h-3.5 w-3.5" />
                   Host Venue
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-extrabold">
                   {config.venueName}
                 </h2>
-                <p className="flex items-start gap-2 text-sm font-semibold text-cyan-400">
+                <p className="flex items-start gap-2 text-sm font-semibold text-[#318CE7]">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                   <span>
                     {config.venueAddress} • {config.venueCity}
@@ -524,7 +524,7 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
       {/* Executive CTA Glass Banner */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="glass-panel-strong relative overflow-hidden rounded-[2.2rem] p-8 sm:p-12 text-center">
+          <div className="section-highlight relative overflow-hidden rounded-[2.2rem] border p-8 sm:p-12 text-center shadow-xl" style={{ borderColor: "var(--glass-border)" }}>
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold">
               Ready to Join <span className="text-gradient-aurora">{config.shortName}</span>?
             </h2>
@@ -538,14 +538,14 @@ export function SummitApp({ initialData }: { initialData: FullSiteData }) {
               <button
                 type="button"
                 onClick={() => openRegister("Delegate")}
-                className="btn-aurora rounded-full px-7 py-3.5 text-sm font-bold cursor-pointer"
+                className="btn-primary rounded-full px-7 py-3.5 text-sm font-bold cursor-pointer"
               >
                 Register as Delegate
               </button>
               <button
                 type="button"
                 onClick={() => openRegister("Sponsor")}
-                className="glass-panel rounded-full px-7 py-3.5 text-sm font-semibold transition hover:scale-105 cursor-pointer"
+                className="btn-secondary rounded-full px-7 py-3.5 text-sm font-bold cursor-pointer"
               >
                 Sponsor / Exhibit
               </button>

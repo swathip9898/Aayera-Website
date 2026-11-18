@@ -194,8 +194,8 @@ export function AdminShell() {
           className="glass-panel-strong w-full max-w-md rounded-[2rem] p-8"
         >
           <div className="mb-6 flex flex-col items-center text-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/20 to-indigo-500/20 border border-cyan-400/30">
-              <Lock className="h-6 w-6 text-cyan-400" />
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EAF5FF] border border-[#E3EDF7]">
+              <Lock className="h-6 w-6 text-[#318CE7]" />
             </div>
             <h1 className="mt-4 font-display text-2xl font-extrabold">
               Summit <span className="text-gradient-aurora">Admin CMS</span>
@@ -273,7 +273,7 @@ export function AdminShell() {
               {mobileNavOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
             <div className="flex items-center gap-2.5">
-              <Sliders className="h-5 w-5 text-cyan-400" />
+              <Sliders className="h-5 w-5 text-[#318CE7]" />
               <span className="font-display text-base sm:text-lg font-extrabold">
                 {siteData?.config.shortName || "Summit"} <span className="text-gradient-aurora">Admin</span>
               </span>
@@ -337,7 +337,7 @@ export function AdminShell() {
                     setMobileNavOpen(false);
                   }}
                   className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-xs font-bold transition cursor-pointer ${
-                    active ? "btn-aurora text-white" : "hover:bg-white/10"
+                    active ? "btn-primary text-white" : "hover:bg-[#EAF5FF]/60"
                   }`}
                 >
                   <Icon className="h-4 w-4 shrink-0" />
@@ -370,9 +370,9 @@ export function AdminShell() {
               >
                 {activeTab === "overview" && (
                   <div className="space-y-6">
-                    <div className="glass-panel-strong rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="section-highlight rounded-3xl border p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4" style={{ borderColor: "var(--glass-border)" }}>
                       <div>
-                        <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">
+                        <span className="text-xs font-bold uppercase tracking-widest text-[#318CE7]">
                           Control Center
                         </span>
                         <h1 className="mt-1 font-display text-2xl sm:text-3xl font-extrabold">
@@ -385,7 +385,7 @@ export function AdminShell() {
                       <button
                         type="button"
                         onClick={() => setActiveTab("banners")}
-                        className="btn-aurora self-start rounded-full px-5 py-2.5 text-xs font-bold cursor-pointer"
+                        className="btn-primary self-start rounded-full px-5 py-2.5 text-xs font-bold cursor-pointer"
                       >
                         Manage Hero Banners →
                       </button>

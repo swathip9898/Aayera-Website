@@ -40,7 +40,7 @@ export const SEED_CONFIG: Omit<SiteConfig, "id"> = {
   organizerName: "Aayera Events",
   contactEmail: "partnerships@aayera.com",
   contactPhone: "+91 80 4820 9100",
-  defaultTheme: "dark",
+  defaultTheme: "light",
   stats: [
     { label: "Global Delegates", value: "1,500", suffix: "+" },
     { label: "Executive Speakers", value: "85", suffix: "+" },

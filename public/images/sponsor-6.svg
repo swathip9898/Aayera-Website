@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" fill="none">
-    <rect x="14" y="25" width="38" height="38" rx="10" fill="#38bdf8" fill-opacity="0.22" stroke="#38bdf8" stroke-width="2.5"/>
-    <circle cx="33" cy="44" r="9" fill="#38bdf8"/>
-    <text x="68" y="52" font-family="system-ui, sans-serif" font-size="21" font-weight="800" fill="#38bdf8" letter-spacing="2">NEXACONNECT</text>
+    <rect x="14" y="25" width="38" height="38" rx="10" fill="#70B7FF" fill-opacity="0.22" stroke="#70B7FF" stroke-width="2.5"/>
+    <circle cx="33" cy="44" r="9" fill="#70B7FF"/>
+    <text x="68" y="52" font-family="system-ui, sans-serif" font-size="21" font-weight="800" fill="#2478CC" letter-spacing="2">NEXACONNECT</text>
   </svg>

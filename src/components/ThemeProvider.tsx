@@ -10,14 +10,16 @@ interface ThemeContextValue {
 }
 
 const ThemeContext = createContext<ThemeContextValue>({
-  theme: "dark",
+  theme: "light",
   setTheme: () => {},
   toggleTheme: () => {},
 });
 
+const STORAGE_KEY = "summit_theme_mode_v2";
+
 export function ThemeProvider({
   children,
-  defaultTheme = "dark",
+  defaultTheme = "light",
 }: {
   children: React.ReactNode;
   defaultTheme?: ThemeMode;
@@ -26,7 +28,7 @@ export function ThemeProvider({
 
   useEffect(() => {
     try {
-      const saved = window.localStorage.getItem("summit_theme_mode") as ThemeMode | null;
+      const saved = window.localStorage.getItem(STORAGE_KEY) as ThemeMode | null;
       const initial = saved === "dark" || saved === "light" ? saved : defaultTheme;
       setThemeState(initial);
       document.documentElement.setAttribute("data-theme", initial);
@@ -39,7 +41,7 @@ export function ThemeProvider({
     setThemeState(mode);
     document.documentElement.setAttribute("data-theme", mode);
     try {
-      window.localStorage.setItem("summit_theme_mode", mode);
+      window.localStorage.setItem(STORAGE_KEY, mode);
     } catch {
       // ignore storage errors
     }

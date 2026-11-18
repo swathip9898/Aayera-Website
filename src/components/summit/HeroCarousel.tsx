@@ -59,10 +59,10 @@ export function HeroCarousel({
 
   const overlayGradient =
     current.overlayStyle === "prism"
-      ? "linear-gradient(125deg, rgba(19, 10, 42, 0.84) 0%, rgba(15, 23, 42, 0.56) 55%, rgba(6, 78, 114, 0.72) 100%)"
+      ? "linear-gradient(125deg, rgba(37, 54, 74, 0.88) 0%, rgba(36, 120, 204, 0.68) 55%, rgba(49, 140, 231, 0.58) 100%)"
       : current.overlayStyle === "obsidian"
-      ? "linear-gradient(125deg, rgba(4, 9, 20, 0.88) 0%, rgba(10, 20, 40, 0.62) 55%, rgba(6, 52, 62, 0.72) 100%)"
-      : "linear-gradient(125deg, rgba(5, 12, 30, 0.84) 0%, rgba(15, 28, 60, 0.52) 50%, rgba(8, 60, 74, 0.68) 100%)";
+      ? "linear-gradient(125deg, rgba(20, 34, 52, 0.90) 0%, rgba(37, 54, 74, 0.72) 55%, rgba(36, 120, 204, 0.62) 100%)"
+      : "linear-gradient(125deg, rgba(26, 44, 66, 0.86) 0%, rgba(36, 120, 204, 0.62) 52%, rgba(49, 140, 231, 0.54) 100%)";
 
   return (
     <section
@@ -104,29 +104,29 @@ export function HeroCarousel({
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -18, filter: "blur(6px)" }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
-                className="rounded-3xl border border-white/15 bg-slate-950/38 p-7 sm:p-10 backdrop-blur-2xl shadow-2xl"
+                className="rounded-3xl border border-[#E3EDF7]/30 bg-[#25364A]/45 p-7 sm:p-10 backdrop-blur-2xl shadow-2xl"
               >
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/12 px-4 py-1.5 text-xs font-semibold tracking-wide text-cyan-200">
-                  <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
+                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#70B7FF]/45 bg-[#318CE7]/25 px-4 py-1.5 text-xs font-semibold tracking-wide text-[#EAF5FF]">
+                  <Sparkles className="h-3.5 w-3.5 text-[#70B7FF]" />
                   <span>{current.badge || config.editionBadge}</span>
                 </div>
 
-                <h1 className="font-display text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-tight text-white">
+                <h1 className="font-display text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-tight !text-white">
                   {current.title}
                 </h1>
 
-                <p className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-200/90">
+                <p className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-[#EAF5FF]/90">
                   {current.subtitle}
                 </p>
 
                 {/* Date & Venue Pills */}
-                <div className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-100">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-md">
-                    <Calendar className="h-4 w-4 text-cyan-300" />
+                <div className="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm text-white">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/12 px-4 py-2 backdrop-blur-md">
+                    <Calendar className="h-4 w-4 text-[#70B7FF]" />
                     {config.eventDates}
                   </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-md">
-                    <MapPin className="h-4 w-4 text-emerald-300" />
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/12 px-4 py-2 backdrop-blur-md">
+                    <MapPin className="h-4 w-4 text-[#70B7FF]" />
                     {config.venueName}, {config.venueCity}
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export function HeroCarousel({
                   <button
                     type="button"
                     onClick={() => handleAction(current.ctaPrimaryAction, current.ctaPrimaryUrl)}
-                    className="btn-aurora inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold tracking-wide cursor-pointer"
+                    className="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold tracking-wide cursor-pointer"
                   >
                     {current.ctaPrimaryText || "Register Now"}
                     <ArrowRight className="h-4 w-4" />
@@ -146,7 +146,7 @@ export function HeroCarousel({
                     onClick={() =>
                       handleAction(current.ctaSecondaryAction, current.ctaSecondaryUrl)
                     }
-                    className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-xl transition hover:bg-white/20 cursor-pointer"
+                    className="btn-secondary inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold cursor-pointer"
                   >
                     {current.ctaSecondaryText || "Explore Agenda"}
                   </button>
@@ -162,21 +162,21 @@ export function HeroCarousel({
             transition={{ duration: 0.65, delay: 0.15 }}
             className="lg:col-span-4"
           >
-            <div className="rounded-3xl border border-white/20 bg-slate-950/45 p-6 backdrop-blur-2xl shadow-2xl">
+            <div className="rounded-3xl border border-[#E3EDF7]/30 bg-[#25364A]/52 p-6 backdrop-blur-2xl shadow-2xl">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-widest text-cyan-300">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#70B7FF]">
                   Summit Countdown
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/15 px-2.5 py-1 text-[11px] font-semibold text-emerald-300">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#318CE7]/25 border border-[#70B7FF]/40 px-2.5 py-1 text-[11px] font-semibold text-[#EAF5FF]">
+                  <span className="h-2 w-2 rounded-full bg-[#70B7FF] animate-pulse" />
                   Live Registration
                 </span>
               </div>
 
-              <h2 className="mt-2 font-display text-lg font-bold text-white">
+              <h2 className="mt-2 font-display text-lg font-bold !text-white">
                 {config.eventName}
               </h2>
-              <p className="mt-1 text-xs text-slate-300">{config.industry}</p>
+              <p className="mt-1 text-xs text-[#EAF5FF]/80">{config.industry}</p>
 
               <div className="mt-5">
                 <CountdownTimer targetIso={config.countdownTarget} />
@@ -186,28 +186,28 @@ export function HeroCarousel({
                 <button
                   type="button"
                   onClick={() => onOpenRegister("Delegate")}
-                  className="rounded-xl border border-white/15 bg-white/10 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-white/20 cursor-pointer"
+                  className="rounded-xl border border-white/20 bg-white/12 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-[#318CE7] cursor-pointer"
                 >
                   Delegate Pass
                 </button>
                 <button
                   type="button"
                   onClick={() => onOpenRegister("Sponsor")}
-                  className="rounded-xl border border-cyan-300/30 bg-cyan-400/15 px-3 py-2.5 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-400/25 cursor-pointer"
+                  className="rounded-xl border border-[#70B7FF]/50 bg-[#70B7FF]/25 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-[#318CE7] cursor-pointer"
                 >
                   Sponsor / Exhibit
                 </button>
                 <button
                   type="button"
                   onClick={() => onOpenRegister("Speaker")}
-                  className="rounded-xl border border-white/15 bg-white/10 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-white/20 cursor-pointer"
+                  className="rounded-xl border border-white/20 bg-white/12 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-[#318CE7] cursor-pointer"
                 >
                   Apply to Speak
                 </button>
                 <button
                   type="button"
                   onClick={() => onOpenRegister("Media")}
-                  className="rounded-xl border border-white/15 bg-white/10 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-white/20 cursor-pointer"
+                  className="rounded-xl border border-white/20 bg-white/12 px-3 py-2.5 text-xs font-semibold text-white transition hover:bg-[#318CE7] cursor-pointer"
                 >
                   Media Pass
                 </button>
@@ -228,8 +228,8 @@ export function HeroCarousel({
                   aria-label={`Banner slide ${idx + 1}`}
                   className={`h-2.5 rounded-full transition-all cursor-pointer ${
                     idx === index % slides.length
-                      ? "w-10 bg-cyan-400 shadow-[0_0_16px_rgba(34,211,238,0.8)]"
-                      : "w-2.5 bg-white/35 hover:bg-white/60"
+                      ? "w-10 bg-[#70B7FF] shadow-[0_0_16px_rgba(112,183,255,0.85)]"
+                      : "w-2.5 bg-white/40 hover:bg-white/70"
                   }`}
                 />
               ))}

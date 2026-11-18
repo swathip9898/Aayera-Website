@@ -18,12 +18,12 @@ export function ThemeToggleButton({ className = "" }: { className?: string }) {
     >
       {theme === "dark" ? (
         <>
-          <Sun className="h-4 w-4 text-amber-300" />
+          <Sun className="h-4 w-4 text-[#70B7FF]" />
           <span className="hidden sm:inline">Light Glass</span>
         </>
       ) : (
         <>
-          <Moon className="h-4 w-4 text-indigo-600" />
+          <Moon className="h-4 w-4 text-[#318CE7]" />
           <span className="hidden sm:inline">Dark Glass</span>
         </>
       )}
@@ -146,12 +146,12 @@ export function CountdownTimer({ targetIso }: { targetIso: string }) {
       {boxes.map((box) => (
         <div
           key={box.label}
-          className="glass-subtle flex flex-col items-center justify-center rounded-2xl px-3 py-2.5 text-center"
+          className="flex flex-col items-center justify-center rounded-2xl border border-[#70B7FF]/35 bg-[#EAF5FF]/15 px-3 py-2.5 text-center backdrop-blur-md"
         >
           <span className="font-display text-xl sm:text-2xl font-bold tabular-nums text-white drop-shadow">
             {box.value}
           </span>
-          <span className="text-[10px] uppercase tracking-widest text-cyan-200/80 font-semibold">
+          <span className="text-[10px] uppercase tracking-widest text-[#EAF5FF]/90 font-semibold">
             {box.label}
           </span>
         </div>
